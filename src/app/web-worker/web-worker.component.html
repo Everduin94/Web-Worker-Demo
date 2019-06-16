@@ -1,0 +1,9 @@
+<div>
+  <button (click)="startWebWorker()" type="button">Start Web Worker</button>
+</div>
+<div>
+    <button (click)="startMain()" type="button">Start Main</button>
+</div>
+<div *ngIf="loading" class="centered">
+    <fa-icon [icon]="circle" [spin]="true" size="6x"></fa-icon>
+</div>

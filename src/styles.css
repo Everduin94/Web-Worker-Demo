@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+div {
+    padding: 20px;
+}
+
+button {
+    text-align: center;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 4px;
+    color: #FFFFFF;
+    background: #0074D9;
+    border: solid 1px #FFFFFF;
+}
+
+
+button:hover {
+    color:#0074D9;
+    background: #FFFFFF;
+    border: solid 1px #0074D9;
+}
+
