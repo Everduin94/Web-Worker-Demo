@@ -2,26 +2,22 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
 
-## Development server
+## Usage
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Make sure you have Node and the Angular CLI installed.
 
-## Code scaffolding
+From a unix-based terminal (I use git-bash on Windows)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+git clone https://github.com/Everduin94/Web-Worker-Demo.git
+cd Web-Worker-Demo
+npm install
+ng serve --o
+```
 
-## Build
+The application is not configured to run the worker or main thread on start-up. So if you want to see the effect on performance when running lighthouse go to src/app/web-worker/web-worker.component.ts and enabled either `this.startWebWorker();` or `this.startMain()` inside of the `ngOnInit(){}` method.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+However, you can simulate either by performing a single click on the web worker or main button. Notice, a widget appears when using the web worker and the hover css classes can still toggle. This illustrates why we use the web worker. When we click the main button, the UI is locked. -- The tester button is an additional illustration. Click while running main, the component will not appear until after the process is finished.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Article
+https://medium.com/@erxk_verduin/improve-performance-with-web-workers-497931fdef1b
